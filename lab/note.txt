@@ -1,0 +1,32 @@
+/** List of library 
+***************************************************************************/
+npm install --save-dev nodemon // need for auto-refresh
+npm install express --save // web server
+npm install morgan // print log in the console
+
+/** How to use morgan 
+***************************************************************************/
+var express = require('express'),
+  app = express(),
+  port = process.env.PORT || 3000;
+
+const morgan = require('morgan')
+
+app.use(morgan('short')) // combined , short
+
+app.listen(port, () => {
+    console.log('todo list RESTful API server started on: ' + port);
+});
+
+/** How to use nodemon 
+***************************************************************************/
+- Don't need to import, Just run it in the command line
+$ nodemon .\server2.js // use nodemon instead of node
+
+
+/** Login + Registration with Passport 
+***************************************************************************/
+
+https://www.youtube.com/watch?v=IlpU1z3cvSQ&index=4&list=PLwbqtYnbSiYLqKQVaq70f-OG70Y2UslqN
+
+https://www.youtube.com/watch?v=ma9tKRR0dGk
