@@ -1,9 +1,9 @@
 var Pool = require('pg').Pool;
 var config = {
     host: 'localhost',
-    user: 'campus1',
-    password: 'campus1',
-    database: 'institute1',
+    user: 'mycampus',
+    password: 'mycampus',
+    database: 'school',
     port: '5433'
 
 };
@@ -11,7 +11,8 @@ var config = {
 var postgres = new Pool(config);
 
 async function get_hits(){
-    var response = await postgres.query("select * from classes");
+    console.log('called');
+    var response = await postgres.query("select * from room");
     console.log(response.rows);
 }
 
