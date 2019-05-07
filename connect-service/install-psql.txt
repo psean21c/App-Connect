@@ -1,5 +1,0 @@
-Install 9.6 version for 32 bits
-
-C:\Program Files (x86)\PostgreSQL\9.6
-password: connect
-Port: 5433
