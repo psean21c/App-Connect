@@ -2,31 +2,27 @@
 -- $ psql -f school.sql -U postgres -p 5433
 
 
-/******************
- 1) 
-******************/
+/************************************
+ 1) Connect DB + Create Schema
+************************************/
 -- connect to postgres (password: connect )
 DOS> psql -U postgres -p 5433
 
 -- drop schema if exists mycampus;
 -- drop user if exists mycampus;
 
+-- # create user mycampus login password 'mycampus';
+-- # create schema mycampus authorization mycampus;
+
 create role mycampus with login password 'mycampus';
 ALTER role mycampus CREATEDB;
 \q
 
-/******************
- 2) 
-******************/
+/************************************
+ 2) Login with Schema(mycampus) + Create DB
+************************************/
 -- Login with mycampus
 DOS> psql -d postgres -U mycampus -p 5433
-
--- # create database school;
--- # \c school
--- # create user mycampus login password 'mycampus';
--- # create schema mycampus authorization mycampus;
--- # \q
-
 
 $ drop database if exists school; 
 $ create database school;
@@ -35,9 +31,9 @@ $ \c school
 
 drop table if exists room;
 
-/******************
+/************************************
  3) 
-******************/
+************************************/
 
 -- note : Do not use wording 'description' because it's the reserved name
 create table room (
