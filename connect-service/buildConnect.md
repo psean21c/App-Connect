@@ -1,10 +1,11 @@
-# Install 9.6 version for 32 bits
+# Install Database - Postgres  9.6 version for 32 bits
 
 /***************************************
 C:\Program Files (x86)\PostgreSQL\9.6
 password: connect
 Port: 5433
 **************************************/
+
 
 
 # Main Procedure
@@ -16,6 +17,8 @@ Port: 5433
 5) How to go to Clouding
 
 /***************************************
+Call REST from postman 
+
 POST : 
 - Headers 
  Key : Content-Type 
@@ -31,12 +34,32 @@ POST :
 # React
 1) NPM
 2) React Developer Tools >> chrome
-3) https://github.com/facebook/create-react-app
+- React Developer Tools
 
-#
-$npx create-react-app react-connect
+3) create react project : https://github.com/facebook/create-react-app
+4) create react bootstrap: https://reactstrap.github.io/
 
 
-# Reference
+- Component, component, component
+
+
+
+
+# Create Project 
+1) install all NPM package
+$ npx create-react-app books-app
+
+$cd books-app
+$npm start
+
+
+
+## Reference
+- boiler plate : 
+
+https://github.com/facebook/create-react-app
+
+
  https://node-postgres.com/
+
 

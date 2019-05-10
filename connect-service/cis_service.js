@@ -8,12 +8,19 @@ const morgan = require('morgan')
 const router = require('./db_query');
 const bodyParser = require('body-parser')
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 app.use(morgan('combined')) // combined , short
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(router)
 
+
 app.listen(port, () => {
-    console.log('RESTful API server(v-05) started on: ' + port);
+    console.log('RESTful API server(v-06) started on: ' + port);
 });
 

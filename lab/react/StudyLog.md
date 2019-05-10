@@ -1,4 +1,0 @@
-### React
-
-## Component, component, component
-
