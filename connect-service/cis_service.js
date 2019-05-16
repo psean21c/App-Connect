@@ -1,4 +1,5 @@
 // Objective : complete REST API (get/put/post/delete)
+// How to run : nodemon cis_service.js 
 
 const express = require('express'),
   app = express(),
@@ -10,6 +11,7 @@ const bodyParser = require('body-parser')
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
@@ -21,6 +23,6 @@ app.use(router)
 
 
 app.listen(port, () => {
-    console.log('RESTful API server(v-06) started on: ' + port);
+    console.log('RESTful API server started on: ' + port);
 });
 

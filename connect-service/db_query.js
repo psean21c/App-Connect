@@ -8,17 +8,17 @@ function getConnection(){
         user: 'mycampus',
         password: 'mycampus',
         database: 'school',
-        port: '5433',
+        port: '5432',
         connectionList: 10
     
     })
 }
 
 // GET all
-router.get('/rooms/',(req,res) =>{
+router.get('/students/',(req,res) =>{
     console.log("Fetching all classes:[" + req + "]")
 
-    const queryString = "SELECT * FROM room"
+    const queryString = "SELECT * FROM students"
     getConnection().query(
         queryString,(err, rows, fields) => {
             console.log("I think we fetched users successfully")
@@ -29,25 +29,25 @@ router.get('/rooms/',(req,res) =>{
 })
 
 // GET one
-router.get('/room/:id',(req,res) =>{
-    const classId = req.params.id
-    console.log("Fetching class:[" + classId + "]" + req)
-    const queryString = "SELECT * FROM room where id = $1"
-    getConnection().query(queryString,[classId],(err, rows, fields) => {
+router.get('/student/:id',(req,res) =>{
+    const id = req.params.id
+    console.log("Fetching class:[" + id + "]" + req)
+    const queryString = "SELECT * FROM students where id = $1"
+    getConnection().query(queryString,[id],(err, rows, fields) => {
             console.log("the data=[" + rows.rows + "], fields[" + fields + "]")
             res.json(rows.rows)
     })
 })
 
 // POST
-router.post('/addRoom', function(req,res) {
+router.post('/addStudent', function(req,res) {
     console.log("add Class req=" + req + ":param=" + req.params + ":body=" + req.body);
-    console.log(req.body.cname +  ":" + req.body.cdescription);
-    const cname = req.body.cname;
-    const cdescription = req.body.cdescription;
-    console.log("Fetching cname:[" + cname + "]" + ",cdescription=[" + cdescription + "]" )    
-    const queryString = "INSERT INTO room(cname,cdescription) VALUES($1,$2)";
-    getConnection().query(queryString,[cname,cdescription],(err, client, fields) => {
+    const firstname = req.body.firstname;
+    const lastname = req.body.lastname;
+    const country = req.body.country;
+    console.log("Fetching firstname:[" + firstname + "]" + ",lastname=[" + lastname + "], country=[" + country + "]" )    
+    const queryString = "INSERT INTO students(firstname,lastname, country) VALUES($1,$2, $3)";
+    getConnection().query(queryString,[firstname,lastname,country],(err, client, fields) => {
         if(err) {
             return console.error('error fetching client from pool', err);
         }
@@ -60,13 +60,14 @@ router.post('/addRoom', function(req,res) {
 
 
 // PUT
-router.put('/updateRoom/:id', (req, res) => {
-    const cid = req.params.id;
-    const cname = req.body.cname;
-    const cdescription = req.body.cdescription;
-    console.log("Fetching cid:[" + cid + "],cname=[" + cname + ",]cdescription=[" + cdescription + "]" )    
-    const queryString = "UPDATE room SET cname = $2, cdescription = $3 WHERE id =$1";
-    getConnection().query(queryString,[cid, cname,cdescription],(err, client, fields) => {
+router.put('/updateStudent/:id', (req, res) => {
+    const id = req.params.id;
+    const firstname = req.body.firstname;
+    const lastname = req.body.lastname;
+    const country = req.body.country;
+    console.log("Fetching id[" + id + "],firstname=[" + firstname + "], lastname=[" + lastname + "],country=" + country + "]" )    
+    const queryString = "UPDATE students SET firstname = $2, lastname = $3, country = $4 WHERE id =$1";
+    getConnection().query(queryString,[id, firstname,lastname,country],(err, client, fields) => {
         if(err) {
             console.error('error fetching client from pool', err);
             return res.status(404).end();
@@ -78,11 +79,11 @@ router.put('/updateRoom/:id', (req, res) => {
 })
 
 // DELETE
-router.delete('/delRoom/:id', (req, res) => {
-    const cid = req.params.id;
-    console.log("Trying to delete the class #:[" + cid + "]" )    
-    const queryString = "DELETE FROM room WHERE id =$1";
-    getConnection().query(queryString,[cid],(err, client, fields) => {
+router.delete('/delStudent/:id', (req, res) => {
+    const id = req.params.id;
+    console.log("Trying to delete the class #:[" + id + "]" )    
+    const queryString = "DELETE FROM students WHERE id =$1";
+    getConnection().query(queryString,[id],(err, client, fields) => {
         if(err) {
             console.error('error fetching client from pool', err);
             return res.status(404).end();
@@ -96,7 +97,7 @@ router.delete('/delRoom/:id', (req, res) => {
 // Root
 router.get("/",(req,res) => {
     console.log("Responding to root route")
-    res.send("Hello from ROOOOT")
+    res.send("Hello from CIS Root Service")
 })
 
 module.exports = router

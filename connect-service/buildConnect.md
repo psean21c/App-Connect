@@ -1,16 +1,27 @@
 # Install Database - Postgres  9.6 version for 32 bits
 
 /***************************************
+Windows
+**************************************/
 C:\Program Files (x86)\PostgreSQL\9.6
 password: connect
 Port: 5433
+
+/***************************************
+Mac
 **************************************/
+/Library/PostgreSQL/10/data
+Password : connect
+Port: 5432
 
-
+# How to run
+- delete package-lock.json
+- $ npm install
+- $ nodemon cis_service.js
 
 # Main Procedure
 1) Build REST API for CIS
- * npm install ..
+ $ npm install ..
 2) DB schema
 3) Front End
 4) Business requirement for POC
@@ -18,6 +29,7 @@ Port: 5433
 
 /***************************************
 Call REST from postman 
+**************************************/
 
 POST : 
 - Headers 
@@ -26,10 +38,10 @@ POST :
 - Body >> raw
  {
         "id": 3,
-        "cname": "ESL-4",
-        "cdescription": "MATH" 
+        "firstname": "Cindy",
+        "lastname": "Kwon",
+        "country": "Korea"
   }
-**************************************/
 
 # React
 1) NPM
