@@ -48,17 +48,10 @@ POST :
 2) React Developer Tools >> chrome
 - React Developer Tools
 
-3) create react project : https://github.com/facebook/create-react-app
-4) create react bootstrap: https://reactstrap.github.io/
-
-
-- Component, component, component
-
-
 
 
 # Create Project 
-1) install all NPM package
+1) install the lastest NPM package and create a project [1]
 $ npx create-react-app books-app
 
 $cd books-app
@@ -69,9 +62,16 @@ $npm start
 ## Reference
 - boiler plate : 
 
+[1] Create react project
 https://github.com/facebook/create-react-app
 
+[2] ReactStrap (BootStrap)
+create react bootstrap: https://reactstrap.github.io/
 
- https://node-postgres.com/
+[3] ReactStrap best practice
+https://www.youtube.com/watch?v=9CPmtIeapMw 
+
+[4] Node for postgres
+https://node-postgres.com/
 
 
