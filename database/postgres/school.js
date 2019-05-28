@@ -4,7 +4,7 @@ var config = {
     user: 'mycampus',
     password: 'mycampus',
     database: 'school',
-    port: '5433'
+    port: '5432'
 
 };
 
@@ -12,7 +12,7 @@ var postgres = new Pool(config);
 
 async function get_hits(){
     console.log('called');
-    var response = await postgres.query("select * from room");
+    var response = await postgres.query("select * from students");
     console.log(response.rows);
 }
 

@@ -29,20 +29,22 @@ $ create database school;
 $ \c school
 
 
-drop table if exists room;
+drop table if exists students;
 
 /************************************
  3) 
 ************************************/
 
 -- note : Do not use wording 'description' because it's the reserved name
-create table room (
+create table students (
     id serial primary key,
-    cname text,
-    cdescription text
+    firstname text,
+    lastname text,
+    country text,
+    dob text,
+    comment text
 );
 
-insert into room(cname,cdescription) values
-    ('ESL-3','TOEFL'),
-    ('ESL-4','GMAT')
+insert into students(firstname,lastname,country) values
+    ('Simon','Park','Canada')
 ;
