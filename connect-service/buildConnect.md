@@ -1,23 +1,28 @@
 # Install Database - Postgres  9.6 version for 32 bits
 
 /***************************************
-Windows
+# Windows
 **************************************/
 C:\Program Files (x86)\PostgreSQL\9.6
 password: connect
 Port: 5433
 
 /***************************************
-Mac
+# Mac
 **************************************/
 /Library/PostgreSQL/10/data
 Password : connect
 Port: 5432
 
+/***************************************
 # How to run
+**************************************/
+
 - delete package-lock.json
 - $ npm install
 - $ nodemon cis_service.js
+- make sure that port is properly updated based on your env.
+  (db_query.js) i.e.      port: '5433'
 
 # Main Procedure
 1) Build REST API for CIS
@@ -42,6 +47,9 @@ POST :
         "lastname": "Kwon",
         "country": "Korea"
   }
+
+* Test on GET
+http://localhost:3000/students/
 
 # React
 1) NPM

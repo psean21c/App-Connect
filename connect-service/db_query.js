@@ -8,7 +8,7 @@ function getConnection(){
         user: 'mycampus',
         password: 'mycampus',
         database: 'school',
-        port: '5432',
+        port: '5433',
         connectionList: 10
     
     })
@@ -24,6 +24,7 @@ router.get('/students/',(req,res) =>{
             console.log("I think we fetched users successfully")
             console.log("the data=[" + rows.rows + "]")
             res.json(rows.rows)
+
             }
     )
 })
