@@ -15,6 +15,10 @@
 - connect-service
 - connect-client
 - connect-database
+- database
+  - mongo
+  - mysql
+  - postgres
 
 ## How to run
 - delete package-lock.json
