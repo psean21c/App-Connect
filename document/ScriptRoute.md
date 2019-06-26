@@ -15,7 +15,11 @@
 [1] React Router Tutorial | React For Beginners (Dev Ed)
 - https://www.youtube.com/watch?v=Law7wfdg_ls&t=632s
 
-[2] Stack Overflow
-https://stackoverflow.com/questions/53641800/npm-flatmap-stream0-1-1-not-found
 
+## Troubleshoot
+[1] Issue: cannot resolve module 'react-dom'
+- https://stackoverflow.com/questions/53914013/failed-to-compile-module-not-found-cant-resolve-react-router-dom
+
+[2] Issue: npm flatmap-stream@0.1.1 not found
+- https://stackoverflow.com/questions/53641800/npm-flatmap-stream0-1-1-not-found
 
