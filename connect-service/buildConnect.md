@@ -77,7 +77,7 @@
 [2] ReactStrap (BootStrap) : create react bootstrap: 
 - https://reactstrap.github.io/
 
-[3] ReactStrap best practice
+[3] ReactStrap practice : Basic CRUD 
 - https://www.youtube.com/watch?v=9CPmtIeapMw 
 
 [4] Node for postgres
