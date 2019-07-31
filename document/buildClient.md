@@ -8,14 +8,27 @@
 - Create new project (Example)
     - Step 1 : Create React Project
         - C:\Project\App-Connect-React\cis-app2> cd ..
-        - C:\Project\App-Connect-React> npx create-react-app cis-app3
+        - C:\Project\App-Connect-React> npx create-react-app {app-name}
         - install the lastest NPM package and create a project [1]
     - Step 2 : Install Router module
-        - $ npm install react-router-dom --saves
+        - npm install {module}
         - See below if any errors such as "404 Not Found: flatmap-stream@0.1.1"
     - Step 3: Run the React on the directory
         - $ npm start
     - Instruction created by 'Dev Ed' on Youtube [3]
+
+#### Steps to install other modules
+- Other modules
+    - Step 1 :  
+        - $ cd {app-name}
+        - $ npm install react-dom --save
+        - $ npm install react-router-dom --saves
+        - $ npm install axios --saves
+        - $ npm install @material-ui/core --save
+        - $ npm install @material-ui/icons --save
+        * $ npm install reactstrap --save (*)
+        - install the lastest NPM package and create a project [1]
+
 
 
 ## Reference
@@ -44,3 +57,5 @@
 [2] Issue: npm flatmap-stream@0.1.1 not found
 - https://stackoverflow.com/questions/53641800/npm-flatmap-stream0-1-1-not-found
 
+[3] Callback vs. Promises
+- https://softwareengineering.stackexchange.com/questions/302455/is-there-really-a-fundamental-difference-between-callbacks-and-promises
