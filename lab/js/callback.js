@@ -33,24 +33,6 @@
 //     console.log('All done');
 // });
 
-
-let c = 4
-const addX = x => n => n + x
-const addThree = addX(3)
-let d = addThree(c)
-console.log('example partial application', d)
-
-let c2 = 4
-function addX2(x) {
-  return function(n) {
-     return n + x
-  }
-}
-const addThree2 = addX2(3)
-let d2 = addThree(c2)
-console.log('example partial application', d2)
-
-
 /*** 
  * 
 // Closure .. 
@@ -138,3 +120,24 @@ fs3[2]();
 
 
 */
+
+let c = 4
+const addX = x => n => n + x
+const addThree = addX(3)
+let d = addThree(c)
+console.log('example partial application', d)
+
+let c2 = 4
+function addX2(x) {
+  return function(n) {
+     return n + x
+  }
+}
+const addThree2 = addX2(3)
+let d2 = addThree(c2)
+console.log('example partial application', d2)
+
+
+const addY = y;
+const addFour = addY(4);
+console.log(addFour);

@@ -15,7 +15,7 @@
         - $ nodemon cis_service.js
 
 
-#### How to test REST API using Postman 
+#### How to run REST API using Postman 
 - How to test CRUD (Create/Retrieve/Update/Delete)
     - 1) GET (Retrive)
         - http://localhost:3000/students/
@@ -35,7 +35,15 @@
 - It's good to check the file [db_query.js] for Service API
 
 
+#### How to run Unit TEST using mocha 
+$ mocha tests --recursive --watch 
+
+
 ## Reference
 [1] Node for postgres
 - https://node-postgres.com/
 
+[2] Unit Test for Node
+- https://www.codementor.io/davidtang/unit-testing-and-tdd-in-node-js-part-1-8t714s877
+- https://developer.ibm.com/tutorials/learn-nodejs-unit-testing-in-nodejs/
+- https://blog.risingstack.com/node-hero-node-js-unit-testing-tutorial/
