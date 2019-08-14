@@ -36,7 +36,16 @@
 
 
 #### How to run Unit TEST using mocha 
-$ mocha tests --recursive --watch 
+    - Create folder and locate it
+    $ mkdir {app} && cd {app}
+    $ npm install -g mocha
+    - Initialize the project
+    $ npm init
+    $ npm install chai --save-dev
+    - Run the mocha
+    $ mocha .\cart-summary-test.js
+
+    $ mocha tests --recursive --watch 
 
 
 ## Reference
@@ -44,6 +53,11 @@ $ mocha tests --recursive --watch
 - https://node-postgres.com/
 
 [2] Unit Test for Node
-- https://www.codementor.io/davidtang/unit-testing-and-tdd-in-node-js-part-1-8t714s877
-- https://developer.ibm.com/tutorials/learn-nodejs-unit-testing-in-nodejs/
-- https://blog.risingstack.com/node-hero-node-js-unit-testing-tutorial/
+- https://sinonjs.org/ (A)
+- https://developer.ibm.com/tutorials/learn-nodejs-unit-testing-in-nodejs/ (A)
+- https://www.codementor.io/davidtang/unit-testing-and-tdd-in-node-js-part-1-8t714s877 (B : subtotal)
+- https://codeburst.io/javascript-unit-testing-using-mocha-and-chai-1d97d9f18e71 (B)
+- https://blog.risingstack.com/node-hero-node-js-unit-testing-tutorial/ (B)
+
+[3]
+- https://journal.artfuldev.com/unit-testing-node-applications-with-typescript-using-mocha-and-chai-384ef05f32b2
