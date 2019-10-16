@@ -13,7 +13,10 @@ https://leetcode.com/problems/subsets/
 
 [Disjoint] Union Find
 1192. Critical Connections in a Network
+https://leetcode.com/problems/critical-connections-in-a-network/
 
 1202. Smallest String With Swaps
 https://leetcode.com/problems/smallest-string-with-swaps/
 https://leetcode.com/contest/weekly-contest-155/problems/smallest-string-with-swaps/
+
+[Chess]

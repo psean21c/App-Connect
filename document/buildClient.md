@@ -59,3 +59,6 @@
 
 [3] Callback vs. Promises
 - https://softwareengineering.stackexchange.com/questions/302455/is-there-really-a-fundamental-difference-between-callbacks-and-promises
+
+[4] VS code 
+https://code.visualstudio.com/docs/languages/html
