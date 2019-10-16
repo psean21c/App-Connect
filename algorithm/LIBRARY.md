@@ -8,7 +8,7 @@ https://leetcode.com/problems/contiguous-array/
 https://github.com/psean21c/algorithm/blob/master/resource/java/algo/minmax/ContiguousArray.md
 
 [Dynamics]
-78. - Subsets
+78. Subsets
 https://leetcode.com/problems/subsets/
 
 [Disjoint] Union Find
@@ -20,3 +20,6 @@ https://leetcode.com/problems/smallest-string-with-swaps/
 https://leetcode.com/contest/weekly-contest-155/problems/smallest-string-with-swaps/
 
 [Chess]
+
+[VisualAlgo]
+https://reactjsexample.com/tag/games
