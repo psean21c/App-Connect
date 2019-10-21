@@ -41,6 +41,8 @@
     - scriptClient.md
     - scriptService.md
 
+## Serverless web site: AWS S3
+https://medium.com/@_bryan/building-a-serverless-website-with-s3-1c22ee3a962c
 
 ## Main Items to be delivered
 1) DB schema - Postgres
