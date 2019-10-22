@@ -47,6 +47,10 @@
 
     $ mocha tests --recursive --watch 
 
+## AWS Cloud S3
+
+https://aws.amazon.com/premiumsupport/knowledge-center/s3-troubleshoot-403/
+
 
 ## Reference
 [1] Node for postgres

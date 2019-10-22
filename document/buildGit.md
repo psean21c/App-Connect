@@ -1,10 +1,16 @@
 # Command Script for GIT repository
 
-## When you need to update your branch with master
-- git checkout master
-- git pull
-- git checkout <your-branch>
-- git pull origin master
+# When you need to update your branch with master
+$ git checkout master
+$ git pull
+$ git checkout <your-branch>
+$ git pull origin master
+
+## Create PR
+$ git checkout -b <your-branch>
+$ git commit -m "added new module to project"
+$ git push origin HEAD
+
 
 
 #
