@@ -3,7 +3,7 @@ function ConnectSummary(items) {
 }
 
 ConnectSummary.prototype.getText = function() {
-	return "text"
+	return "text";
 };
 
 module.exports = ConnectSummary;
