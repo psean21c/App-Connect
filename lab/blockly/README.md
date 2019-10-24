@@ -16,6 +16,8 @@ https://codelabs.developers.google.com/codelabs/blockly-web/index.html?index=..%
 # Korean Blockly 
 https://vleudive.github.io/2018/01/23/1_Blockly_intro/
 
+https://developers.google.com/closure/library/docs/gettingstarted
+
 
 **The developer's site is at https://github.com/google/blockly-games/wiki
 
@@ -42,3 +44,9 @@ https://blockly-demo.appspot.com/static/demos/blockfactory/index.html
 
 StackOverflow
 https://stackoverflow.com/questions/44895551/custom-language-generator-to-blockly
+https://stackoverflow.com/questions/30143952/how-can-you-use-the-the-code-generated-by-blockly
+https://stackoverflow.com/questions/39385916/blockly-on-node-js
+https://stackoverflow.com/questions/36499757/how-can-i-make-an-instance-of-a-block-of-blockly-with-javascript
+
+
+

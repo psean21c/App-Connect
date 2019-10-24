@@ -1,6 +1,10 @@
 // reference
 // https://javascript.info/promise-basics
 
+// https://www.chaijs.com/api/bdd/
+// https://codeburst.io/javascript-unit-testing-using-mocha-and-chai-1d97d9f18e71
+// https://mochajs.org/#synchronous-code
+
 
 let abc = function() {
     console.log("abc");
