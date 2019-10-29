@@ -1,0 +1,17 @@
+
+- templates - front 
+                |- game.html
+                |- module.html
+- static - js - main.js
+- api - game_configurations
+                |- conditionals.yaml
+                |- hello_world.yaml
+
+
+
+- Tutorial (moving Block) : Snake 
+https://github.com/ChigabigaChannel/react-hour-projects/tree/master/snake-game
+https://www.youtube.com/watch?v=-oOgsGP3t5o
+
+- react tool
+https://reactjs.org/blog/2019/08/15/new-react-devtools.html
