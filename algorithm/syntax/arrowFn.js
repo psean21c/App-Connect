@@ -38,3 +38,26 @@ foo.method("bar", () => {
 // });
 
 foo.bar();
+
+// http://javascript.info/arrow-functions
+
+let group = {
+    title: "Group",
+    students: ["John", "Pete", "Alice"],
+
+    showList1() {
+        this.students.forEach(function (student) {
+            console.log(this.title + ': ' + student);
+        });
+    },
+
+    showList2() {
+        this.students.forEach(
+            student => console.log(this.title + ':' + student)
+        );
+    }
+};
+
+group.showList1();
+group.showList2();
+
