@@ -26,6 +26,9 @@ https://leetcode.com/contest/weekly-contest-155/problems/smallest-string-with-sw
 695. Max Area of Island
 https://leetcode.com/problems/max-area-of-island/
 
+# earnup assignment: 
+https://github.com/psean21c/AlgorithmLib/blob/master/0_diary/interview/earnup/DirectedGraph.java
+
 [Chess]
 
 [Odd/Even] 

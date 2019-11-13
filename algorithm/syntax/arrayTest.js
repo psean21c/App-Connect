@@ -17,4 +17,10 @@ for (var i of arr) {
    console.log(i); // logs "3", "5", "7"
 }
 
+// Initialize array
+let grid = [[0,0,0],[0,0,0]];
+console.log(Array(grid.length).fill(false));
+console.log( Array(5).fill(0).map(x => Array(3).fill(false)));
+console.log([...Array(grid.length)].map(_ => Array(grid[0].length).fill(false)));
+
 // ref : https://stackoverflow.com/questions/29285897/what-is-the-difference-between-for-in-and-for-of-statements-in-jav
