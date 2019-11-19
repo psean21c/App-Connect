@@ -1,4 +1,19 @@
-// 78. - Subsets
+/***
+ * 
+ * 78 - Subsets
+ * line-25: debug is important because .. you will be given .. [ [ 1 ], [] ] with first (2), 
+ * just before making [ [ 1 ], [ 1, 2 ], [], [ 2 ] ]
+ * In the for loop : 
+ * initial [1] + first (2)
+ *  >> initial [1] with added [1,2] 
+ *  >> pushed to total [ [1], [1,2] ]
+ * initial [] + first(2)
+ *  >> initial [] + added [2]
+ *  >> pushed to total [ [], [2]]
+ * 
+ * After for-loop
+ *  >> total = [ [ 1 ], [ 1, 2 ], [], [ 2 ] ]
+ */
 
 var subsets = function (nums) {
     function loop(remains) {
@@ -7,6 +22,7 @@ var subsets = function (nums) {
         else {
             let first = remains.pop();
             let remain = loop(remains);
+            // console.log('num>> ',remain); 
             for (let i in remain) {
                 let initial = remain[i];
                 let added = [...initial, first];
