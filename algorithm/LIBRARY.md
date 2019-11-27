@@ -40,3 +40,8 @@ https://reactjsexample.com/tag/games
 
 [Yoon]
 https://leetcode.com/yyoon/
+
+[Next]
+1254. Number of Closed Islands
+1262. Greatest Sum Divisible by Three
+https://leetcode.com/contest/weekly-contest-163/problems/greatest-sum-divisible-by-three/

@@ -11,29 +11,31 @@ describe('unit-test-Summary', function () {
 
 	beforeEach('beforeEach(1)', function () {
 		// console.log("context=" + connectSummary.getText());
+		console.log('++++++++++++++++++++++++++++++++=')
 	});
 
-	it('main-test-1', function () {
+	it('test 1', function () {
 		const compare = connectSummary.getText();
 		const expected = 'text';
-		console.log('test-1>> ' + compare + ' vs. ' + expected)
+		// console.log('test-1>> ' + compare + ' vs. ' + expected)
 		assert.equal(compare, expected);
 	})
 
-	it('main-test-2', done => {
-		console.log('test-2>>')
+	it('test 2', done => {
 
 		const card_points = 20;
 		expect(card_points).to.be.equal(20);
-		
-		//AssertionError: expected [Function] to equal 'text'
-		// expect(connectSummary.getText).to.be.equal('text');
-
-		// Fixed!
 		expect(connectSummary.getText()).to.be.equal('text');
 
 		done(); 
 		// Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure "done()" is called;
+	})
+
+	it('test 3', () => {
+		const compare = connectSummary.getA();
+		
+		const expected = 'value A';
+		assert.equal(compare, expected);
 	})
 
 });

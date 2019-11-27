@@ -1,9 +1,0 @@
-{
-    "name": "pod1",
-    "version": "1.0.0",
-    "description": "",
-    "main": "one.js",
-    "scripts": {
-        "test": "mocha --watch"
-    }
-}
