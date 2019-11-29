@@ -46,9 +46,11 @@ https://reactjsexample.com/tag/games
 [Yoon]
 https://leetcode.com/yyoon/
 
-[Next]
-1254. Number of Closed Islands
 
 [LinkedList]
 148. Sort List
 https://github.com/psean21c/AlgorithmLib/tree/master/linkedList
+
+[Next]
+1254. Number of Closed Islands
+https://leetcode.com/problems/friend-circles/
