@@ -97,3 +97,16 @@ dayOfTheWeek(15,8,1993);
 // dayOfTheWeek(28,2,2016);
 // dayOfTheWeek(29,2,2016);
 // dayOfTheWeek(1,3,2016);
+
+// 1051. Height Checker
+// Don't need to think too over complicated.. 
+var heightChecker = function(heights) {
+
+    return [...heights].sort((a,b) => (a-b)).filter( (e,i) => e != heights[i]).length; // 1)
+
+};
+
+let a = [1,1,4,2,1,3]; // 3
+
+let x = heightChecker(a);
+console.log(x);
