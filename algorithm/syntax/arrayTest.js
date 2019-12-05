@@ -24,3 +24,7 @@ console.log( Array(5).fill(0).map(x => Array(3).fill(false)));
 console.log([...Array(grid.length)].map(_ => Array(grid[0].length).fill(false)));
 
 // ref : https://stackoverflow.com/questions/29285897/what-is-the-difference-between-for-in-and-for-of-statements-in-jav
+
+
+// make new list [1,2,3,4,5,6, ... n]
+let a1 = Array.from(Array(n).keys()).map( a => a + 1);
