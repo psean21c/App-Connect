@@ -110,3 +110,81 @@ let a = [1,1,4,2,1,3]; // 3
 
 let x = heightChecker(a);
 console.log(x);
+
+// 867. Transpose Matrix
+// Othere solution;
+// return A[0].map((_,  i) => A.map(b => b[i]));
+// return Array(A[0].length).fill([]).map((_, i) => {
+//     return Array(A.length).fill([]).map((_, n) => A[n][i])
+// })
+
+var transpose = function(A) {
+    let m = A.length;
+    let n = A[0].length;
+    // console.log(A,'>> col=',m,':row=', n);
+    let p = Array.from(Array(n), () => new Array(m));
+    for(let i=0; i<m;i++) {
+        for(let j=0;j<n;j++) {
+            p[j][i] = A[i][j];
+        }
+    }
+    return p;
+};
+
+let a =  [[1,2,3],[4,5,6],[7,8,9]]; // [[1,4,7],[2,5,8],[3,6,9]]
+let b =  [[1,2,3],[4,5,6]]; // [[1,4],[2,5],[3,6]]
+let c = [[1],[2],[3],[4]];
+
+transpose(c);
+transpose(a);
+transpose(b);
+
+
+// 985. Sum of Even Numbers After Queries
+
+var sumEvenAfterQueries_v2 = function(A, queries) {
+    if(A.length ==0) return null;
+
+    let sum = [];
+    queries.forEach( e => {
+        A.splice(e[1],1,A[e[1]] + e[0]);
+        let val = A.filter(a => (a % 2) ==0);
+        if(val.length == 0) sum.push(0);
+        else sum.push(val.reduce( (b,c) => b+c));
+    });
+
+    return sum;
+};
+
+
+
+var sumEvenAfterQueries = function(A, queries) {
+    if(A.length ==0) return null;
+
+    let ans = [];
+    let sum = 0;
+    let even = A.filter( a => (a % 2 ==0));
+    if(even.length !=0) sum = even.reduce( (a,b) => (a + b));
+
+    queries.forEach( (e,i) => {
+        if(A[e[1]] % 2 ==0) sum -= A[e[1]];
+        A[e[1]] += e[0];
+        if(A[e[1]] % 2 ==0) sum += A[e[1]];
+        ans.push(sum);        
+    });
+
+    return ans;
+};
+
+let A1 = [1,2,3,4], queries1 = [[1,0],[-3,1],[-4,0],[2,3]]; //[8,6,2,4]
+let A2 = [1], queries2 = [[4,0]]; //[0]
+let A3 = [1], queries3 = [[5,0]]; //[6]
+let A4 = [5,1], queries4 = [[0,1],[4,0]]; // [0,0];
+
+
+console.log(sumEvenAfterQueries(A1,queries1));
+console.log(sumEvenAfterQueries(A2,queries2));
+console.log(sumEvenAfterQueries(A3,queries3));
+console.log(sumEvenAfterQueries(A4,queries4));
+
+
