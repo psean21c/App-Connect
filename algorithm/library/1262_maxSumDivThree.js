@@ -1,4 +1,5 @@
 // 1262. Greatest Sum Divisible by Three
+// re-create subset of array[] after removing diagnal element..
 
 var maxSumDivThree = function(nums) {
 
