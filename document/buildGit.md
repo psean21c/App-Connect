@@ -1,5 +1,10 @@
 # Command Script for GIT repository
 
+## Create New Project in the github and sync with your local
+$ git checkout -b <mac1>
+$ git push origin mac1
+
+
 ## Create branch before PR(Pull Request)
 $ git checkout -b <your-branch>
 $ git commit -m "added new module to project"
