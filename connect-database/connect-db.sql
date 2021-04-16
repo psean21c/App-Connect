@@ -44,3 +44,24 @@ insert into students(firstname,lastname, country) values
     ('Simon','Park', 'South Korea'),
     ('Cindy','Kwon', 'North Korea')
 ;
+
+
+/************************************
+ 4) basic command after connection (In Mac)
+************************************/
+
+Simons-Air:bin simonpark$ psql -U postgres -p 5432
+password: connect
+
+--  list DB
+postgres-# \l
+
+-- connect DB
+postgres-# \c {school}
+
+-- list tables
+school-# \dt
+
+-- quit DB
+school-# \q
+

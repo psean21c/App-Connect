@@ -1,11 +1,21 @@
-/** List of library 
-***************************************************************************/
-npm install --save-dev nodemon // need for auto-refresh
-npm install express --save // web server
-npm install morgan // print log in the console
 
-/** How to use morgan 
+/***************************************************************************
+** Basic syntax for npm in order to install npm package
+** When you start a new project with existing package.json,
+** you need to run 'npm init' or remove package-lock.json 
+** before running 'npm install'
 ***************************************************************************/
+$ npm install express --save // web server
+
+$ npm install nodemon  // need for auto-refresh
+                       // Also,usually need an option --save-dev because it's usage
+$ npm prune            // remove modules not specified in the package.json file
+
+/***************************************************************************
+** How to use morgan 
+***************************************************************************/
+$ npm install morgan // print log in the console
+
 var express = require('express'),
   app = express(),
   port = process.env.PORT || 3000;
@@ -18,13 +28,15 @@ app.listen(port, () => {
     console.log('todo list RESTful API server started on: ' + port);
 });
 
-/** How to use nodemon 
+/***************************************************************************
+** How to use nodemon 
 ***************************************************************************/
 - Don't need to import, Just run it in the command line
 $ nodemon .\server2.js // use nodemon instead of node
 
 
-/** Login + Registration with Passport 
+/***************************************************************************
+** Login + Registration with Passport 
 ***************************************************************************/
 
 https://www.youtube.com/watch?v=IlpU1z3cvSQ&index=4&list=PLwbqtYnbSiYLqKQVaq70f-OG70Y2UslqN

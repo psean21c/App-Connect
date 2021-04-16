@@ -1,4 +1,5 @@
 // How to run : $ node .\connect-db.js
+// make sure if port is correct (windows=5433, mac=5432)
 var Pool = require('pg').Pool;
 var config = {
     host: 'localhost',
