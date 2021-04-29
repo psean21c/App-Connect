@@ -13,6 +13,7 @@
         - port needs to be updated according to your env. (port:'5433')
     - Step 3: Run the Service
         - $ nodemon cis_service.js
+        - $ npm install -g nodemon     # in order to run 'nodemon' command
 
 
 #### How to run REST API using Postman 

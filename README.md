@@ -19,3 +19,6 @@ Algorithm Library started in this project
 ## May-7 (Tue), 2019
 Decided to start the project
 * go.storeformula.com
+
+## Markup 
+https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
