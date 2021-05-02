@@ -1,4 +1,7 @@
 // how to run : nodemon server.js
+// Node.js (Mongo DB) Tutorial # 9 / 10
+// https://www.youtube.com/watch?v=bxsemcrY4gQ
+// https://www.youtube.com/watch?v=VVGgacjzc2Y
 
 const mongoose = require('mongoose');
 
