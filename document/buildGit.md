@@ -49,3 +49,5 @@ $ git stash pop
 [Medium : rebase vs. merge](https://medium.com/@checko/merging-two-git-repositories-into-one-preserving-the-git-history-4e20d3fafa4e)
 
 [Jira : rebase vs. merge](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+
+[reset revert return](https://opensource.com/article/18/6/git-reset-revert-rebase-commands)
