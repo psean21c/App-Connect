@@ -29,7 +29,6 @@ const blogSchema = new mongoose.Schema({
 // 3) DB model
 const blogPost = mongoose.model('blogPost',blogSchema);
 
-
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
