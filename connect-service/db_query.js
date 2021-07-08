@@ -2,13 +2,14 @@ const express = require('express')
 var pool = require('pg').Pool;
 const router = express.Router()
 
+// make sure if port is correct (windows=5433, mac=5432)
 function getConnection(){
     return pool({
         host: 'localhost',
         user: 'mycampus',
         password: 'mycampus',
         database: 'school',
-        port: '5433',
+        port: '5432',
         connectionList: 10
     
     })

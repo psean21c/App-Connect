@@ -1,55 +1,35 @@
-// https://www.tutorialspoint.com/mongodb/
 
-// 1) Show DB Systems
-//show dbs
+[mong DB manual](https://docs.mongodb.com/manual/reference/method/db.createUser/)
 
-// admin                              0.000GB
-// config                             0.000GB
-// local                              0.000GB
-// node-mongo-registration-login-api  0.000GB
+1) Create Collection
 
-// 2) Switch to the DB
-//use mycustomers
-
-// switched to db mycustomers
- db
-// mycustomers
-
-// 3) Create User
-// db.createUser({
-// ... user:"simon",
-// ... pwd:"1234",
-// ...  roles: [ "readWrite", "dbAdmin" ]
-// ... });
-// https://docs.mongodb.com/manual/reference/method/db.createUser/
-
-// Successfully added user: { "user" : "simon", "roles" : [ "readWrite", "dbAdmin" ] }
-
-// 4) Create Collection
+```
 db.createCollection('customers');
 // { "ok" : 1 }
+```
 
-// 5) Show Collections
-// show collections
+2) Show Collections
 
-// customers
-
+```
 db.customers.insert({first_name:"John",last_name:"Doe"});
 // WriteResult({ "nInserted" : 1 })
+```
 
+3) search Document
+```
 db.customers.find();
 // { "_id" : ObjectId("5c06ec2a49f099d2326ecad1"), "first_name" : "John", "last_name" : "Doe" }
+```
 
-db.customers.find();
-// { "_id" : ObjectId("5c06ec2a49f099d2326ecad1"), "first_name" : "John", "last_name" : "Doe" }
-
-//show collections
-// customers
-// people
+```
 db.people.find();
 // { "_id" : ObjectId("5c06ec582a88942510eb20ae"), "firstname" : "John", "lastname" : "Doe", "address" : "330 Bay St. Toronto", "__v" : 0 }
 // { "_id" : ObjectId("5c06ec582a88942510eb20af"), "firstname" : "Jane", "lastname" : "Doe", "address" : "555 Main St.", "__v" : 0 }
+```
+4) insert Document
+```
 db.customers.insert([{first_name:"Steve", last_name:"Simth"},{first_name:"John",last_name:"Johnson",gender:"female"}]);
+
 // BulkWriteResult({
 //         "writeErrors" : [ ],
 //         "writeConcernErrors" : [ ],
@@ -60,10 +40,13 @@ db.customers.insert([{first_name:"Steve", last_name:"Simth"},{first_name:"John",
 //         "nRemoved" : 0,
 //         "upserted" : [ ]
 // })
+
+```
+
+5) Examples
+```
+
 db.customers.find();
-// { "_id" : ObjectId("5c06ec2a49f099d2326ecad1"), "first_name" : "John", "last_name" : "Doe" }
-// { "_id" : ObjectId("5c06ed5749f099d2326ecad2"), "first_name" : "Steve", "last_name" : "Simth" }
-// { "_id" : ObjectId("5c06ed5749f099d2326ecad3"), "first_name" : "John", "last_name" : "Johnson", "gender" : "female" }
 db.customers.find().pretty();
 db.customers.find().sort({last_name:1});  // ascending
 db.customers.find().sort({last_name:-1}); // descending
@@ -91,5 +74,4 @@ db.customers.find({first_name:"Steve"});
 db.customers.find({$or:[{first_name:"Steve"},{last_name:"Doe"}]});
 
 db.customers.find({"address.city":"Boston"});
-
-
+```

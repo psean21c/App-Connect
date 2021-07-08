@@ -6,7 +6,7 @@ var config = {
     user: 'mycampus',
     password: 'mycampus',
     database: 'school',
-    port: '5433'
+    port: '5432'
 
 };
 
